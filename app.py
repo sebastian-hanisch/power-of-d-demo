@@ -207,7 +207,7 @@ st.markdown(
 | **Alle Lkw gleich wichtig** | Eilige Lkw brauchen Vorfahrt; das verschiebt die Wartezeit zwischen den Klassen. | **[Prioritätsklassen](https://sebastianhanisch-priority-queue-demo.streamlit.app/)** |
 | **Unbegrenzte Schlange** | Mit begrenzten Stellplätzen gehen Lkw verloren, wenn alle angesehenen Schlangen voll sind. | **[M/M/c/c (Erlang B)](https://sebastianhanisch-erlang-b-demo.streamlit.app/)** |
 | **Konstante Ankunftsrate** | Echte Gates haben Wellen; die Wahlregel muss dann zu jeder Zeit mit der aktuellen Spurzahl funktionieren. | **[Zeitvariable Ankünfte](https://sebastianhanisch-time-varying-arrivals-demo.streamlit.app/)** |
-| **Ein Gate** | Wellen und Wartezeiten laufen durch mehrere Stationen (Gate, Kran, Stapel). | **Jackson-Netze** (Folgestück) |
+| **Ein Gate** | Wellen und Wartezeiten laufen durch mehrere Stationen (Gate, Kran, Stapel). | **[Jackson-Netze](https://sebastianhanisch-jackson-network-demo.streamlit.app/)** |
 """
 )
 st.caption(

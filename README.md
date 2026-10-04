@@ -96,7 +96,7 @@ Jede dieser Annahmen hebt ein Folgestück der Linie auf:
 | Alle Lkw gleich wichtig | [Prioritätsklassen](https://github.com/sebastian-hanisch/priority-queue-demo) |
 | Unbegrenzte Schlange | [M/M/c/c (Erlang B)](https://github.com/sebastian-hanisch/erlang-b-demo) |
 | Konstante Ankunftsrate | [Zeitvariable Ankünfte](https://github.com/sebastian-hanisch/time-varying-arrivals-demo) |
-| Ein Gate | Jackson-Netze |
+| Ein Gate | [Jackson-Netze](https://github.com/sebastian-hanisch/jackson-network-demo) |
 
 Kein Folgestück: veraltete Auskünfte und Kosten der Nachfrage, Umstiege zwischen Schlangen.
 
