@@ -202,7 +202,7 @@ st.markdown(
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
 | **Die Auskunft ist sofort und kostenlos** | Jede Nachfrage ist eine Nachricht, und eine veraltete Auskunft lässt viele Lkw dieselbe „kürzeste“ Schlange wählen (Herdenverhalten). Hier sehen alle den aktuellen Stand. | kein Folgestück |
-| **Abfertigungsdauer exponentiell, alle Spuren gleich schnell** | Die Wartezeit hängt von der Streuung der Dauer ab; bei ungleich schnellen Spuren verschiebt sich die beste Wahl. | **M/G/1, Kingman-Näherung** (Folgestück) |
+| **Abfertigungsdauer exponentiell, alle Spuren gleich schnell** | Die Wartezeit hängt von der Streuung der Dauer ab; bei ungleich schnellen Spuren verschiebt sich die beste Wahl. | **[M/G/1, Kingman-Näherung](https://sebastianhanisch-mg1-kingman-demo.streamlit.app/)** |
 | **Lkw wechseln die Schlange nicht** | Wer umsteigt, sobald nebenan eine Spur frei wird, nähert sich der gemeinsamen Schlange an. | kein Folgestück |
 | **Alle Lkw gleich wichtig** | Eilige Lkw brauchen Vorfahrt; das verschiebt die Wartezeit zwischen den Klassen. | **Prioritätsklassen** (Folgestück) |
 | **Unbegrenzte Schlange** | Mit begrenzten Stellplätzen gehen Lkw verloren, wenn alle angesehenen Schlangen voll sind. | **[M/M/c/c (Erlang B)](https://sebastianhanisch-erlang-b-demo.streamlit.app/)** |
