@@ -1,5 +1,7 @@
 # Power-of-d-Choices – welche Schlange? (Streamlit-Demo)
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-power-of-d-demo.streamlit.app/)**
+
 Interaktive Demo zur **Wahl der Schlange an einem Gate mit je einer Schlange je Spur**. **Siebtes Stück der Konzepte-Linie
 „Warteschlangentheorie und Simulation“** im Portfolio von [Sebastian Hanisch](https://sebastianhanisch.net) (Operations Research und
 Machine Learning): ein Verfahren, ein wachsendes Beispiel, jedes Folgestück hebt genau eine Annahme auf.
