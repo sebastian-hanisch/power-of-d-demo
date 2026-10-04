@@ -93,7 +93,7 @@ Jede dieser Annahmen hebt ein Folgestück der Linie auf:
 | Annahme | Folgestück |
 |---|---|
 | Exponentielle Abfertigung, gleiche Spuren | [M/G/1, Kingman-Näherung](https://github.com/sebastian-hanisch/mg1-kingman-demo) |
-| Alle Lkw gleich wichtig | Prioritätsklassen |
+| Alle Lkw gleich wichtig | [Prioritätsklassen](https://github.com/sebastian-hanisch/priority-queue-demo) |
 | Unbegrenzte Schlange | [M/M/c/c (Erlang B)](https://github.com/sebastian-hanisch/erlang-b-demo) |
 | Konstante Ankunftsrate | [Zeitvariable Ankünfte](https://github.com/sebastian-hanisch/time-varying-arrivals-demo) |
 | Ein Gate | Jackson-Netze |
