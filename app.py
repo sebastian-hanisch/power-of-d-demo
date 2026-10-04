@@ -205,7 +205,7 @@ st.markdown(
 | **Abfertigungsdauer exponentiell, alle Spuren gleich schnell** | Die Wartezeit hängt von der Streuung der Dauer ab; bei ungleich schnellen Spuren verschiebt sich die beste Wahl. | **M/G/1, Kingman-Näherung** (Folgestück) |
 | **Lkw wechseln die Schlange nicht** | Wer umsteigt, sobald nebenan eine Spur frei wird, nähert sich der gemeinsamen Schlange an. | kein Folgestück |
 | **Alle Lkw gleich wichtig** | Eilige Lkw brauchen Vorfahrt; das verschiebt die Wartezeit zwischen den Klassen. | **Prioritätsklassen** (Folgestück) |
-| **Unbegrenzte Schlange** | Mit begrenzten Stellplätzen gehen Lkw verloren, wenn alle angesehenen Schlangen voll sind. | **M/M/c/c (Erlang B)** (Folgestück) |
+| **Unbegrenzte Schlange** | Mit begrenzten Stellplätzen gehen Lkw verloren, wenn alle angesehenen Schlangen voll sind. | **[M/M/c/c (Erlang B)](https://sebastianhanisch-erlang-b-demo.streamlit.app/)** |
 | **Konstante Ankunftsrate** | Echte Gates haben Wellen; die Wahlregel muss dann zu jeder Zeit mit der aktuellen Spurzahl funktionieren. | **[Zeitvariable Ankünfte](https://sebastianhanisch-time-varying-arrivals-demo.streamlit.app/)** |
 | **Ein Gate** | Wellen und Wartezeiten laufen durch mehrere Stationen (Gate, Kran, Stapel). | **Jackson-Netze** (Folgestück) |
 """
