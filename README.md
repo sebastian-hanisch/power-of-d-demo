@@ -102,10 +102,10 @@ Kein Folgestück: veraltete Auskünfte und Kosten der Nachfrage, Umstiege zwisch
 
 ## Tests
 
-122 Tests, rund 2 Minuten: Fluid-Rekursion von Hand und gegen die geschlossene Form, d = 1 gleich M/M/1, Doppel-Exponential-Verhalten, Erlang C
+145 Tests, rund 2 Minuten: Fluid-Rekursion von Hand und gegen die geschlossene Form, d = 1 gleich M/M/1, Doppel-Exponential-Verhalten, Erlang C
 gegen die Summenformel, die Wahlregel einzeln (Gleichstände, Zurücklegen, JSQ), eine von Hand gerechnete Mini-Instanz (Ankunftszeiten, Wartezeit,
 alle Zeitintegrale), das Gesetz von Little als exakte Pfad-Identität, Invarianten des Zustands, gleicher Seed gleiches Ergebnis, die gelöste
-Markov-Kette (N = 2 und 3, auch der Pfad mit Stichprobenwahl) gegen die Simulation, Vollständigkeit der vorgerechneten Datei, Presets und
+Markov-Kette (N = 2 und 3, auch der Pfad mit Stichprobenwahl) gegen die Simulation, dazu eine zweite Kette über sortierte Längenvektoren (N = 4: Wartezeit, Anteil freier Spuren, Schwanzanteile), Erlang C gegen die Geburts-Sterbe-Kette, die Gleichgewichtsgleichung des Fluid-Grenzwerts, Vollständigkeit der vorgerechneten Datei, Presets und
 Permalink, Diagramme (gesperrte Achsen), AppTest-Rauchtests, der Smoke-Test der Portfolio-Vorlage (Schaltflächen, Regler an den Grenzen), ein Quelltext-Test gegen Satz-Komma-Fehler und `test_claims.py` für jede Zahl
 dieser README.
 
