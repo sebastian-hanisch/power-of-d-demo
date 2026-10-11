@@ -93,7 +93,7 @@ def test_state_invariants_after_a_run():
         assert g.cnt[k] == sum(1 for x in g.lens if x >= k)
     assert len(g.departures) == sum(1 for x in g.lens if x > 0)               # jede beschäftigte Spur hat genau einen geplanten Abgang
     assert res.tail[0] == 1.0 and all(0 <= x <= 1 for x in res.tail)
-    assert all(a >= b for a, b in zip(res.tail, res.tail[1:]))                # der Schwanz fällt monoton
+    assert all(a >= b for a, b in zip(res.tail, res.tail[1:]))                # der Tail fällt monoton
 
 
 def test_same_seed_same_result_and_different_seed_differs():

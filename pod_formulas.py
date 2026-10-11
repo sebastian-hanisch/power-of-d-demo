@@ -4,7 +4,7 @@ die kürzeste ein; d = 1 ist zufällige Zuteilung, ganz viele d (`D_ALL`) heißt
 
 **Fluid-Grenzwert** (N → ∞; Vvedenskaya, Dobrushin und Karpelevich 1996, Mitzenmacher 2001): der Anteil s_k der Spuren mit mindestens k
 Lkw im System erfüllt im Gleichgewicht s_k = ρ·s_{k−1}^d mit s_0 = 1, in geschlossener Form s_k = ρ^((d^k − 1)/(d − 1)) für d ≥ 2 und
-s_k = ρ^k für d = 1. Die mittlere Verweilzeit folgt aus Little: W = Σ_{k≥1} s_k / ρ, die mittlere Wartezeit ist W − 1. Der Schwanz fällt
+s_k = ρ^k für d = 1. Die mittlere Verweilzeit folgt aus Little: W = Σ_{k≥1} s_k / ρ, die mittlere Wartezeit ist W − 1. Der Tail fällt
 für d ≥ 2 **doppelt exponentiell**, für d = 1 nur exponentiell.
 
 Zum Vergleich: M/M/1-Schlangen je Spur (d = 1, exakt: W = 1/(1 − ρ)) und das gepoolte System mit einer gemeinsamen Schlange (M/M/N,

@@ -25,7 +25,7 @@ die gemeinsame Schlange vorn?
   **d = 1** ist zufällige Zuteilung, **alle** (JSQ, *Join the Shortest Queue*) nimmt die kürzeste aller Schlangen, bei Gleichstand zufällig.
 - **Fluid-Grenzwert** (`pod_formulas.py`): Anteil sₖ der Spuren mit mindestens k Lkw, sₖ = ρ·sₖ₋₁ᵈ, in geschlossener Form
   ρ^((dᵏ−1)/(d−1)) für d ≥ 2 und ρᵏ für d = 1; mittlere Verweilzeit W = Σ sₖ / ρ nach Little, Wartezeit W − 1. Für d ≥ 2 fällt der
-  Schwanz **doppelt exponentiell**, für d = 1 nur exponentiell. Alle Wartezeiten dieser Demo sind **Wartezeiten** (ohne Abfertigung).
+  Tail **doppelt exponentiell**, für d = 1 nur exponentiell. Alle Wartezeiten dieser Demo sind **Wartezeiten** (ohne Abfertigung).
 - **Simulation** (`pod_simulation.py`): Ereignisse Ankunft und Abgang (Abgänge in einem Heap), je Spur eine Warteschlange der
   Ankunftszeiten, SplitMix64 mit getrennten Strömen für Zwischenankunft, Wahl und Abfertigung; die ersten 20 % der Lkw werden nicht
   ausgewertet. Gemessen werden Wartezeit je begonnener Abfertigung, Zeitmittel der Anteile sₖ und der Anteil der Lkw, die eine freie Spur finden.
@@ -44,7 +44,7 @@ Alle Zahlen stehen in `tests/test_claims.py`. Wartezeiten in Minuten bei 3 min m
 |---|---|
 | Wie viel bringt die zweite Auskunft? | Im Grenzwert sinkt die Wartezeit von d = 1 auf d = 2 um den Faktor **4.22 / 5.58 / 7.97** (Auslastung 80 / 90 / 95 %). Bei 90 %: 27.0 → 4.8 min. Simulation mit 200 Spuren: 4.21 / 5.53 / 7.71. |
 | Und die dritte, die fünfte? | Von d = 2 auf 3 nur noch **1.63 / 1.57 / 1.55**, von 3 auf 5 **1.77 / 1.62 / 1.55**. Bei 90 %: 4.8 → 3.1 → 1.9 min. Die erste zusätzliche Auskunft ist die wichtigste; danach bleibt es bei Faktoren um 1.6 (1.55 bis 1.77), und der Sprung von d = 1 auf 2 wächst mit der Auslastung, die späteren Schritte nicht. |
-| Wie verändert sich der Schwanz? | 200 Spuren, Auslastung 90 %, Anteil der Spuren mit mindestens 4 Lkw: d = 1 **66.0 %**, d = 2 **21.8 %**, d = 3 **2.1 %** (Grenzwert 65.6 / 20.6 / 1.5 %), d = 5 praktisch null (0.002 %). |
+| Wie verändert sich der Tail? | 200 Spuren, Auslastung 90 %, Anteil der Spuren mit mindestens 4 Lkw: d = 1 **66.0 %**, d = 2 **21.8 %**, d = 3 **2.1 %** (Grenzwert 65.6 / 20.6 / 1.5 %), d = 5 praktisch null (0.002 %). |
 | Stimmt d = 1 mit M/M/1? | Ja, für jede Spurzahl: Abweichung der Simulation −4.7 % bis +1.4 % (Rauschen, ohne Richtung). |
 | Wie viele Lkw finden eine freie Spur? | 1 − ρ^d: bei 200 Spuren stimmt die Simulation auf einen Prozentpunkt (d = 1, 2, 3, 5). |
 | Ab wie vielen Spuren trägt der Grenzwert? | Die Simulation liegt **immer über** dem Grenzwert, mit 200 Spuren höchstens **+5.5 %**. Mit 50 Spuren: d = 2 +4.2 bis +8.6 %, d = 5 +13.8 bis +22.8 %. Mit 10 Spuren: d = 2 **+23 bis +48 %**, d = 5 **+76 bis +140 %**. Die Abweichung wächst mit d und mit der Auslastung (bei 10 und 50 Spuren in jeder Zelle). |
@@ -105,7 +105,7 @@ Kein Folgestück: veraltete Auskünfte und Kosten der Nachfrage, Umstiege zwisch
 145 Tests, rund 2 Minuten: Fluid-Rekursion von Hand und gegen die geschlossene Form, d = 1 gleich M/M/1, Doppel-Exponential-Verhalten, Erlang C
 gegen die Summenformel, die Wahlregel einzeln (Gleichstände, Zurücklegen, JSQ), eine von Hand gerechnete Mini-Instanz (Ankunftszeiten, Wartezeit,
 alle Zeitintegrale), das Gesetz von Little als exakte Pfad-Identität, Invarianten des Zustands, gleicher Seed gleiches Ergebnis, die gelöste
-Markov-Kette (N = 2 und 3, auch der Pfad mit Stichprobenwahl) gegen die Simulation, dazu eine zweite Kette über sortierte Längenvektoren (N = 4: Wartezeit, Anteil freier Spuren, Schwanzanteile), Erlang C gegen die Geburts-Sterbe-Kette, die Gleichgewichtsgleichung des Fluid-Grenzwerts, Vollständigkeit der vorgerechneten Datei, Presets und
+Markov-Kette (N = 2 und 3, auch der Pfad mit Stichprobenwahl) gegen die Simulation, dazu eine zweite Kette über sortierte Längenvektoren (N = 4: Wartezeit, Anteil freier Spuren, Tail-Anteile), Erlang C gegen die Geburts-Sterbe-Kette, die Gleichgewichtsgleichung des Fluid-Grenzwerts, Vollständigkeit der vorgerechneten Datei, Presets und
 Permalink, Diagramme (gesperrte Achsen), AppTest-Rauchtests, der Smoke-Test der Portfolio-Vorlage (Schaltflächen, Regler an den Grenzen), ein Quelltext-Test gegen Satz-Komma-Fehler und `test_claims.py` für jede Zahl
 dieser README.
 
@@ -125,7 +125,7 @@ dieser README.
 ## Literatur
 
 - Vvedenskaya, N. D., Dobrushin, R. L., Karpelevich, F. I. (1996): Queueing system with selection of the shortest of two queues: an asymptotic
-  approach. *Problems of Information Transmission* 32(1), 15–27 (Grenzwert für viele Spuren, Schwanz fällt überexponentiell).
+  approach. *Problems of Information Transmission* 32(1), 15–27 (Grenzwert für viele Spuren, Tail fällt überexponentiell).
 - Mitzenmacher, M. (2001): The power of two choices in randomized load balancing. *IEEE Transactions on Parallel and Distributed Systems*
   (Fluid-Gleichungen des „Supermarkt-Modells“; d = 2 verbessert die Wartezeit gegenüber d = 1 exponentiell, d = 3 gegenüber d = 2 nur um einen
   konstanten Faktor).

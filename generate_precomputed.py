@@ -2,7 +2,7 @@
 `precomputed_sweep.json`.
 
   study  Zahl der Spuren × Auslastung × Zahl der angesehenen Schlangen: mittlere Wartezeit (Mittel und Standardfehler aus je 4
-         Wiederholungen à 800 000 Lkw), Schwanzanteile s_1 … s_8, Anteil Lkw mit freier Spur"""
+         Wiederholungen à 800 000 Lkw), Tail-Anteile s_1 … s_8, Anteil Lkw mit freier Spur"""
 
 import json
 import os

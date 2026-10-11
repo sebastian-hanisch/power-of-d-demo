@@ -1,7 +1,7 @@
 """Orakel-Test (zweiter, anderer Rechenweg als tests/ctmc_reference.py): Markov-Kette über SORTIERTE Längenvektoren (Symmetrie),
 Wahlwahrscheinlichkeit in geschlossener Form P(kürzeste gezogene Spur hat Länge l) = a_l^d − a_{l+1}^d (a_l = Anteil Spuren mit mindestens
 l Lkw) statt Aufzählen aller Stichproben. Geprüft werden außer der Wartezeit auch die angezeigten Kennzahlen (Anteil freier Spuren,
-Schwanzanteile s_k) an vier Spuren, wo die Wahlregel d = 2, 3 noch von „alle ansehen“ verschieden ist. Dazu: gemeinsame Schlange gegen die
+Tail-Anteile s_k) an vier Spuren, wo die Wahlregel d = 2, 3 noch von „alle ansehen“ verschieden ist. Dazu: gemeinsame Schlange gegen die
 Geburts-Sterbe-Kette und die Gleichgewichtsgleichung des Fluid-Grenzwerts (Differentialform, nicht die telescopierte Rekursion)."""
 
 import itertools

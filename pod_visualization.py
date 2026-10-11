@@ -1,4 +1,4 @@
-"""Plotly-Abbildungen der Power-of-d-Demo: Schwanz der Schlangenlängen (Simulation gegen Fluid-Grenzwert), Wartezeit über die Zahl der
+"""Plotly-Abbildungen der Power-of-d-Demo: Tail der Schlangenlängen (Simulation gegen Fluid-Grenzwert), Wartezeit über die Zahl der
 Auskünfte, Genauigkeit des Grenzwerts über die Gate-Größe, Abstand zur gemeinsamen Schlange. Achsen sind gesperrt (fixedrange),
 damit Touch-Geräte beim Scrollen nicht zoomen."""
 

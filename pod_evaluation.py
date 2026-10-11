@@ -38,7 +38,7 @@ def live_report(n, rho, d, seed, customers=C.LIVE_CUSTOMERS):
 
 
 def study_cell_run(n, rho, d, customers, seed, reps):
-    """Eine Studienzelle: `reps` unabhängige Läufe (Seeds seed, seed + 1, …); Mittel und Standardfehler der Wartezeit, mittlere Schwanzanteile
+    """Eine Studienzelle: `reps` unabhängige Läufe (Seeds seed, seed + 1, …); Mittel und Standardfehler der Wartezeit, mittlere Tail-Anteile
     s_1 … s_K, Anteil Lkw mit freier Spur und die Auslastung."""
     runs = [simulate(n, rho, d, customers, seed + 1000 * r, warm_fraction=C.WARMUP_FRACTION) for r in range(reps)]
     wait, wait_se = mean_and_se([r.mean_wait for r in runs])
