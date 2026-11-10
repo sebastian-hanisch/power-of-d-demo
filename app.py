@@ -3,7 +3,7 @@ Sebastian Hanisch - Operations Research und Machine Learning
 
 Siebtes Stück der Konzepte-Linie "Warteschlangentheorie und Simulation": Das Terminal-Gate hat N Spuren mit je eigener Schlange (nicht
 eine gemeinsame wie in Stück 3). Jeder Lkw sieht sich d zufällige Schlangen an und reiht sich in die kürzeste ein. Die Demo vergleicht
-Simulation und Fluid-Grenzwert und zeigt, wie viel jede weitere Auskunft bringt, ab wie vielen Spuren der Grenzwert trägt und wie weit
+Simulation und Fluid-Grenzwert und zeigt, wie viel jede weitere Auskunft bringt, ab wie vielen Spuren der Grenzwert gilt und wie weit
 die gemeinsame Schlange noch voraus ist. Siehe README für die Einordnung in die Linie.
 
 Lauffähig mit: streamlit run app.py
@@ -162,7 +162,7 @@ st.info(
 )
 
 st.markdown("---")
-st.subheader("🔬 Ab wie vielen Spuren trägt der Grenzwert?")
+st.subheader("🔬 Ab wie vielen Spuren gilt der Grenzwert?")
 st.markdown(
     f"Abweichung der simulierten Wartezeit vom Grenzwert für 10, 50 und 200 Spuren bei Auslastung {C.fmt_pct(study_rho)}; Fehlerbalken = "
     f"Standardfehler. Je Zelle {pre['study_reps']} Läufe à {C.fmt_int(pre['study_customers'])} Lkw."

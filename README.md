@@ -14,7 +14,7 @@ die kürzeste.
 
 ## Kernfrage
 
-Wie viel bringt jede weitere Auskunft (d = 1, 2, 3, 5, alle), ab wie vielen Spuren trägt der Fluid-Grenzwert, und wie weit bleibt
+Wie viel bringt jede weitere Auskunft (d = 1, 2, 3, 5, alle), ab wie vielen Spuren gilt der Fluid-Grenzwert, und wie weit bleibt
 die gemeinsame Schlange vorn?
 
 ## Modell und Methodik
@@ -47,7 +47,7 @@ Alle Zahlen stehen in `tests/test_claims.py`. Wartezeiten in Minuten bei 3 min m
 | Wie verändert sich der Tail? | 200 Spuren, Auslastung 90 %, Anteil der Spuren mit mindestens 4 Lkw: d = 1 **66.0 %**, d = 2 **21.8 %**, d = 3 **2.1 %** (Grenzwert 65.6 / 20.6 / 1.5 %), d = 5 praktisch null (0.002 %). |
 | Stimmt d = 1 mit M/M/1? | Ja, für jede Spurzahl: Abweichung der Simulation −4.7 % bis +1.4 % (Rauschen, ohne Richtung). |
 | Wie viele Lkw finden eine freie Spur? | 1 − ρ^d: bei 200 Spuren stimmt die Simulation auf einen Prozentpunkt (d = 1, 2, 3, 5). |
-| Ab wie vielen Spuren trägt der Grenzwert? | Die Simulation liegt **immer über** dem Grenzwert, mit 200 Spuren höchstens **+5.5 %**. Mit 50 Spuren: d = 2 +4.2 bis +8.6 %, d = 5 +13.8 bis +22.8 %. Mit 10 Spuren: d = 2 **+23 bis +48 %**, d = 5 **+76 bis +140 %**. Die Abweichung wächst mit d und mit der Auslastung (bei 10 und 50 Spuren in jeder Zelle). |
+| Ab wie vielen Spuren gilt der Grenzwert? | Die Simulation liegt **immer über** dem Grenzwert, mit 200 Spuren höchstens **+5.5 %**. Mit 50 Spuren: d = 2 +4.2 bis +8.6 %, d = 5 +13.8 bis +22.8 %. Mit 10 Spuren: d = 2 **+23 bis +48 %**, d = 5 **+76 bis +140 %**. Die Abweichung wächst mit d und mit der Auslastung (bei 10 und 50 Spuren in jeder Zelle). |
 | Wie weit ist die gemeinsame Schlange voraus? | Auch mit voller Auskunft (JSQ) bleibt die Wartezeit **in allen neun Zellen** über der gemeinsamen Schlange (Verhältnis 1.22 bis 10.27); bei 90 %: **1.34** (10 Spuren), **2.36** (50), **4.38** (200). Das Verhältnis wächst mit N, weil die gemeinsame Schlange mit N fast auf null fällt; der absolute Abstand schrumpft dabei mit N (bei 90 %: 0.7 min bei 10 Spuren, 0.3 min bei 50, 0.05 min bei 200). |
 | Absolute Zahlen? | 50 Spuren, 90 %: d = 1 **27.1 min**, d = 2 **5.1**, d = 3 3.4, d = 5 2.2, alle **0.5**, gemeinsame Schlange **0.2 min**. 10 Spuren, d = 2: **6.5 min** gegen 4.8 min im Grenzwert (+34 %), gemeinsame Schlange 2.0 min. 200 Spuren, 95 %: 55.8 / 7.2 / 4.7 / 3.1 / 0.3 min. |
 | Wie verlässlich sind die Zahlen? | Der größte relative Standardfehler einer Zelle beträgt 5.6 % (Mittel aus 4 Läufen), die meisten liegen unter 2 %. |

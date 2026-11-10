@@ -104,7 +104,7 @@ def test_charts_sections_and_limits_table_are_present():
     _ok(at)
     assert len(at.get("plotly_chart")) == 5
     headers = [s.value for s in at.subheader]
-    for part in ("Wie viel bringt jede weitere Auskunft", "Ab wie vielen Spuren trägt der Grenzwert", "gemeinsame Schlange noch voraus",
+    for part in ("Wie viel bringt jede weitere Auskunft", "Ab wie vielen Spuren gilt der Grenzwert", "gemeinsame Schlange noch voraus",
                  "Wo die Annahmen enden"):
         assert any(part in h for h in headers), part
     table = next(m.value for m in at.markdown if "Wer setzt an" in m.value)
